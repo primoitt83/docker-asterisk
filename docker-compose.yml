@@ -20,7 +20,7 @@ services:
       - ./logs:/var/log
       - ./data/www:/var/www/html
      ### Only Enable this option below if you set DB_EMBEDDED=TRUE
-     #- ./db:/var/lib/mysql
+     #- ./db:/var/lib/mysql##
 
     environment: 
       - VIRTUAL_HOST=mail.zimteste.serpro.gov.br

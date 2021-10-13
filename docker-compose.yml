@@ -4,11 +4,12 @@ services:
   freepbx-app:
     container_name: asterisk-webrtc
     image: ast-teste/webrtc
+    expose:
+     - 443:443
     ports:
      #### If you aren't using a reverse proxy
      #- 80:80
      #### If you want SSL Support and not using a reverse proxy
-     - 443:443
      - 5060:5060
      - 5160:5160
      - 18000-18100:18000-18100/udp

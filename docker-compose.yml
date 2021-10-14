@@ -6,6 +6,7 @@ services:
     image: asterisk/webrtc:latest
     expose:
      - 443
+     - 80
     ports:
      #### If you aren't using a reverse proxy
      #- 80:80

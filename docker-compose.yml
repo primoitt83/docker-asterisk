@@ -4,9 +4,9 @@ services:
   asterisk:
     container_name: asterisk-webrtc
     image: asterisk/webrtc:latest
-    expose:
-     - 443
-     - 80
+    #expose:
+    # - 443
+    # - 80
     ports:
      #### If you aren't using a reverse proxy
      #- 80:80
@@ -25,14 +25,14 @@ services:
      #- ./db:/var/lib/mysql##
 
     environment: 
-      #- VIRTUAL_HOST=pbx.zimteste.serpro.gov.br
-      #- VIRTUAL_NETWORK=net
+      - VIRTUAL_HOST=pbx.zimteste.serpro.gov.br
+      - VIRTUAL_NETWORK=net
      ### If you want to connect to the SSL Enabled Container 
       #- VIRTUAL_PORT=443
-      #- VIRTUAL_PROTO=https
-     # - VIRTUAL_PORT=4000
-      #- LETSENCRYPT_HOST=pbx.zimteste.serpro.gov.br
-      #- LETSENCRYPT_EMAIL=tiago.ribeiro@serpro.gov.br
+      - VIRTUAL_PROTO=http
+      - VIRTUAL_PORT=8088
+      - LETSENCRYPT_HOST=pbx.zimteste.serpro.gov.br
+      - LETSENCRYPT_EMAIL=tiago.ribeiro@serpro.gov.br
 
       #- ZABBIX_HOSTNAME=freepbx-app
       #- ENABLE_FAIL2BAN=FALSE
@@ -56,7 +56,9 @@ services:
     restart: always
     networks:
       - asterisk
-      - net
+      - net:
+           ipv4_address: 172.31.0.4
+
     ### These final lines are for Fail2ban. If you don't want, comment and also add ENABLE_FAIL2BAN=FALSE to your environment
     #cap_add:
     #  - NET_ADMIN

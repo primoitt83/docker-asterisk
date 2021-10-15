@@ -57,7 +57,7 @@ services:
     networks:
       - asterisk
       - net:
-           ipv4_address: 172.31.0.4
+           ipv4_address: "172.31.0.4"
 
     ### These final lines are for Fail2ban. If you don't want, comment and also add ENABLE_FAIL2BAN=FALSE to your environment
     #cap_add:

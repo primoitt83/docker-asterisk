@@ -56,8 +56,7 @@ services:
     restart: always
     networks:
       - asterisk
-      - net:
-           ipv4_address: "172.31.0.4"
+      - net  
 
     ### These final lines are for Fail2ban. If you don't want, comment and also add ENABLE_FAIL2BAN=FALSE to your environment
     #cap_add:

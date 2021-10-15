@@ -14,8 +14,8 @@ services:
      - 5060:5060
      - 5160:5160
      - 18000-18100:18000-18100/udp
-     - 8088:8088
-     - 8089:8089
+     #- 8088:8088
+     #- 8089:8089
     ##volumes:
      ## - ./certs:/certs
      ## - ./data:/data
@@ -29,8 +29,8 @@ services:
       - VIRTUAL_NETWORK=net
      ### If you want to connect to the SSL Enabled Container 
       #- VIRTUAL_PORT=443
-      - VIRTUAL_PROTO=http
-      - VIRTUAL_PORT=8088
+     # - VIRTUAL_PROTO=http
+     # - VIRTUAL_PORT=8088
       - LETSENCRYPT_HOST=pbx.zimteste.serpro.gov.br
       - LETSENCRYPT_EMAIL=tiago.ribeiro@serpro.gov.br
 

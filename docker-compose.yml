@@ -29,8 +29,8 @@ services:
       - VIRTUAL_NETWORK=net
      ### If you want to connect to the SSL Enabled Container 
       #- VIRTUAL_PORT=443
-      - VIRTUAL_PROTO=https
-      - VIRTUAL_PORT=8088
+      #- VIRTUAL_PROTO=https
+      #- VIRTUAL_PORT=8088
       - LETSENCRYPT_HOST=pbx.zimteste.serpro.gov.br
       - LETSENCRYPT_EMAIL=tiago.ribeiro@serpro.gov.br
 

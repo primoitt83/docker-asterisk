@@ -33,7 +33,7 @@ services:
       - VIRTUAL_PORT=8089
       - LETSENCRYPT_HOST=pbx.zimteste.serpro.gov.br
       - LETSENCRYPT_EMAIL=tiago.ribeiro@serpro.gov.br
-      - IP_DOCKER=
+      - IP_DOCKER=172.23.0.3
 
       #- ZABBIX_HOSTNAME=freepbx-app
       #- ENABLE_FAIL2BAN=FALSE

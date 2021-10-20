@@ -58,7 +58,7 @@ services:
     networks:
       - asterisk
       - net
-          ipv4_address: 172.23.0.3
+    #      ipv4_address: 172.23.0.3
 
     ### These final lines are for Fail2ban. If you don't want, comment and also add ENABLE_FAIL2BAN=FALSE to your environment
     #cap_add:
@@ -70,7 +70,7 @@ networks:
     external: true
       ipam:
         driver: default
-          config:
-            - subnet: "172.23.0.0/24"    
+   #       config:
+   #         - subnet: "172.23.0.0/24"    
   asterisk:
     internal: true    

@@ -68,9 +68,9 @@ services:
 networks:
   net:
     external: true
-       ipam:
-         driver: default
-         config:
-           - subnet: "172.23.0.0/24"    
+      ipam:
+        driver: default
+          config:
+            - subnet: "172.23.0.0/24"    
   asterisk:
     internal: true    
